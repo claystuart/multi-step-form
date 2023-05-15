@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/multi-step-form/static/css/main.a94acac1.css",
-    "main.js": "/multi-step-form/static/js/main.810a0052.js",
+    "main.css": "/multi-step-form/static/css/main.8c11b063.css",
+    "main.js": "/multi-step-form/static/js/main.caffc512.js",
     "static/media/bg-sidebar-mobile.svg": "/multi-step-form/static/media/bg-sidebar-mobile.ad41661b40ca0b967f3a.svg",
     "index.html": "/multi-step-form/index.html",
-    "main.a94acac1.css.map": "/multi-step-form/static/css/main.a94acac1.css.map",
-    "main.810a0052.js.map": "/multi-step-form/static/js/main.810a0052.js.map"
+    "main.8c11b063.css.map": "/multi-step-form/static/css/main.8c11b063.css.map",
+    "main.caffc512.js.map": "/multi-step-form/static/js/main.caffc512.js.map"
   },
   "entrypoints": [
-    "static/css/main.a94acac1.css",
-    "static/js/main.810a0052.js"
+    "static/css/main.8c11b063.css",
+    "static/js/main.caffc512.js"
   ]
 }

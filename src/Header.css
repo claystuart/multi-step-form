@@ -1,0 +1,39 @@
+header {
+    width: 375px;
+    height: 172px;
+    background-image: url(../images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+nav {
+    width: 180px;
+    height: 33px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-inline: auto;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+label {
+    width: 33px;
+    height: 33px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+:checked + label {
+    background-color: #BEE2FD;
+    color: black;
+}
+

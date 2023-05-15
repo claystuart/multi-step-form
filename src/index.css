@@ -5,3 +5,12 @@ body {
   font-family: 'Ubuntu', sans-serif;
   background-color: #EFF5FF;
 }
+
+#root {
+  outline: 1px solid green;
+  width: 375px;
+  min-height: 695px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

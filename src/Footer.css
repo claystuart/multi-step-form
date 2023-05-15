@@ -1,0 +1,37 @@
+footer {
+    width: 375px;
+    height: 72px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    border: none;
+    margin: 16px;
+}
+
+.btn-back {
+    color: #9699AA;
+    background-color: transparent;
+}
+
+.btn-back:hover {
+    color: #022959;
+}
+
+.btn-forward {
+    width: 97px;
+    height: 40px;
+    color: white;
+    background-color: #022959;
+    border-radius: 5px;
+}
+
+.btn-forward:hover {
+    background-color: #164A8A;
+    cursor: pointer
+}

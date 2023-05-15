@@ -6,7 +6,7 @@ header {
     display: flex;
 }
 
-nav {
+.siteNav {
     width: 180px;
     height: 33px;
     display: flex;
@@ -15,11 +15,11 @@ nav {
     margin-inline: auto;
 }
 
-input[type='radio']{
+.nav-radio{
     display: none;
 }
 
-label {
+.nav-label {
     width: 33px;
     height: 33px;
     border: 1px solid white;
@@ -32,7 +32,7 @@ label {
     font-weight: bold;
 }
 
-:checked + label {
+:checked + .nav-label {
     background-color: #BEE2FD;
     color: black;
 }

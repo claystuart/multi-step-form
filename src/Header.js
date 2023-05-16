@@ -1,4 +1,8 @@
 import "./Header.css";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Pages to switch between
+import PersonalInformation from "./pages/PersonalInformation";
 
 function Header() {
     return (
@@ -20,6 +24,8 @@ function Header() {
                     name="nav" value='4'></input>
                 <label htmlFor="page4" className="nav-label">4</label>
             </nav>
+
+            <PersonalInformation />
         </header>
     );
 }

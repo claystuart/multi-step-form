@@ -1,8 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
+import "./css/Navigation.css";
 
-function Layout() {
+function Navigation() {
     return (
-        <>
+        <header>
             <nav>
                 <ul>
                     <li>
@@ -17,12 +18,15 @@ function Layout() {
                     <li>
                         <Link to="/finish">4</Link>
                     </li>
+                    <li>
+                        <Link to="/thankyou">Thank You</Link>
+                    </li>
                 </ul>
             </nav>
 
             <Outlet />
-        </>
+        </header>
     )
 };
 
-export default Layout;
+export default Navigation;

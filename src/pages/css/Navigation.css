@@ -1,7 +1,7 @@
 header {
     min-width: 375px;
     height: 172px;
-    background-image: url(../images/bg-sidebar-mobile.svg);
+    background-image: url(../../images/bg-sidebar-mobile.svg);
     background-size: cover;
     display: flex;
     flex-direction: column;

@@ -1,9 +1,11 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Navigation";
+import "./pages/css/index.css";
+
+import Navigation from "./pages/Navigation";
 import Footer from "./Footer";
 
-import Home from "./pages/Home";
+import Info from "./pages/Info";
 import Plan from "./pages/Plan";
 import Addons from "./pages/AddOns";
 import NoPage from "./pages/NoPage";
@@ -15,8 +17,8 @@ export default function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Info />} />
           <Route path="plan" element={<Plan />} />
           <Route path="addons" element={<Addons />} />
           <Route path="finish" element={<Finish />} />

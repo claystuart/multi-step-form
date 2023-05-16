@@ -1,4 +1,4 @@
-import "./css/home.css";
+import "./css/info.css";
 import { useState } from 'react';
 
 function Home() {

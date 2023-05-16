@@ -17,11 +17,7 @@ header {
     margin-inline: auto;
 }
 
-.nav-radio{
-    display: none;
-}
-
-.nav-label {
+.link {
     width: 33px;
     height: 33px;
     border: 1px solid white;
@@ -32,11 +28,11 @@ header {
     color: white;
     font-size: 14px;
     font-weight: bold;
+    text-decoration: none;
 }
 
-:checked + .nav-label {
+.link:hover {
     background-color: #BEE2FD;
     color: black;
     border: none;
 }
-

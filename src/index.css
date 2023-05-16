@@ -1,16 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #EFF5FF;
+  background-color: #9699AA;
 }
 
 #root {
-  outline: 1px solid green;
   width: 375px;
   min-height: 695px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #EFF5FF;
+}
+
+@media(min-width: 768px) {
+  body{
+    background-color: #EFF5FF;
+  }
+
+  #root{
+    background-color: white;
+  }
 }

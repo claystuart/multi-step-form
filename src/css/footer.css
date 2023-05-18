@@ -12,26 +12,34 @@ footer {
     font-size: 14px;
     border: none;
     margin: 16px;
+    display: block;
+    text-decoration: none;
 }
 
-.btn-back {
+.back {
     color: #9699AA;
     background-color: transparent;
 }
 
-.btn-back:hover {
+.back:hover {
     color: #022959;
 }
 
-.btn-forward {
+.next {
     width: 97px;
     height: 40px;
     color: white;
     background-color: #022959;
     border-radius: 5px;
+    display: grid;
+    place-items: center;
 }
 
-.btn-forward:hover {
+.next:hover {
     background-color: #164A8A;
     cursor: pointer
+}
+
+.hideBackBtn {
+   visibility: hidden;
 }

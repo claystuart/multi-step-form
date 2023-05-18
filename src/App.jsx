@@ -15,16 +15,19 @@ export default function App() {
     return (
         <>
             <Header />
-            {/* Begin Routing */}
-            <Routes>
-                <Route path="/multi-step-form" element={<Info />} />
-                <Route path="/plan" element={<Plan />} />
-                <Route path="/addons" element={<Addons />} />
-                <Route path="/finish" element={<Finish />} />
-                <Route path="/thankYou" element={<ThankYou />} />
-                <Route path="*" element={<NoPage />} />
-            </Routes>
-            {/* End Routing */}
+            <main>
+                {/* Begin Routing */}
+                <Routes>
+                    <Route path="/multi-step-form" element={<Info />} />
+                    <Route path="/plan" element={<Plan />} />
+                    <Route path="/addons" element={<Addons />} />
+                    <Route path="/finish" element={<Finish />} />
+                    <Route path="/thankYou" element={<ThankYou />} />
+                    <Route path="*" element={<NoPage />} />
+                </Routes>
+                {/* End Routing */}
+            </main>
+
             <Footer />
         </>
     )

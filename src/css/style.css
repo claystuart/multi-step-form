@@ -20,6 +20,13 @@ body {
   background-color: #EFF5FF;
 }
 
+main {
+  position: absolute;
+  top: 99px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media(min-width: 768px) {
   body{
     background-color: #EFF5FF;

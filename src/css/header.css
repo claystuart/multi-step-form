@@ -1,14 +1,14 @@
 header {
     min-width: 375px;
     height: 172px;
-    background-image: url(../../images/bg-sidebar-mobile.svg);
+    background-image: url(../images/bg-sidebar-mobile.svg);
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.siteNav {
+.navbar {
     width: 180px;
     height: 33px;
     display: flex;
@@ -29,10 +29,15 @@ header {
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
+    position: relative;
 }
 
-.link:hover {
-    background-color: #BEE2FD;
-    color: black;
+.activeLink {
     border: none;
+    color: black;
+} 
+
+.activeDiv {
+    background: #BEE2FD;
+    border-radius: 50%;
 }

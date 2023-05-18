@@ -1,16 +1,17 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
-import "./css/footer.css";
+import "./css/header.css";
 
-export default function Footer() {
+export default function Header() {
     return (
-        <footer>
-            <button className="btn btn-back">
-                Go Back
-            </button>
-            <button className="btn btn-forward">
-                Next Step
-            </button>
-        </footer>
+        <header>
+            <nav className="navbar">
+                <Hyperlink to="/" className="link">1</Hyperlink>
+                <Hyperlink to="/plan" className="link">2</Hyperlink>
+                <Hyperlink to="/addons" className="link">3</Hyperlink>
+                <Hyperlink to="/finish" className="link">4</Hyperlink>
+            </nav>
+        </header >
+
     );
 }
 

@@ -1,6 +1,6 @@
-function AddOns(){
-    return(
-<h1>Pick add-ons</h1>
+function AddOns() {
+    return (
+        <h1>Pick add-ons</h1>
     );
 }
 

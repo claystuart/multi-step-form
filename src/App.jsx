@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 
-import Info from "./pages/Info"
+import Info from "./pages/PersonalInfo"
 import Plan from "./pages/Plan"
 import Addons from "./pages/AddOns"
 import NoPage from "./pages/404"

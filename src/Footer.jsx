@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom"
 import "./css/footer.css";
 
 export default function Footer() {
-    const pages = ["/", "/plan", "/addons", "/finish", "/thankYou"];
+    const pages = ["/multi-step-form", "/plan", "/addons", "/finish", "/thankYou"];
     return (
         <footer>
             <BackButton pages={pages}>Go Back</BackButton>

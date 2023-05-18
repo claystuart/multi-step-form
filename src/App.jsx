@@ -17,7 +17,7 @@ export default function App() {
             <Header />
             {/* Begin Routing */}
             <Routes>
-                <Route path="/" element={<Info />} />
+                <Route path="/multi-step-form" element={<Info />} />
                 <Route path="/plan" element={<Plan />} />
                 <Route path="/addons" element={<Addons />} />
                 <Route path="/finish" element={<Finish />} />

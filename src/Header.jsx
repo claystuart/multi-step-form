@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <header>
             <nav className="navbar">
-                <Hyperlink to="/" className="link">1</Hyperlink>
+                <Hyperlink to="/multi-step-form" className="link">1</Hyperlink>
                 <Hyperlink to="/plan" className="link">2</Hyperlink>
                 <Hyperlink to="/addons" className="link">3</Hyperlink>
                 <Hyperlink to="/finish" className="link">4</Hyperlink>
@@ -19,6 +19,7 @@ export default function Header() {
 function Hyperlink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+    
 
     return (
         <div className={isActive ? "activeDiv" : ""}>

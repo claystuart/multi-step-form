@@ -40,6 +40,15 @@ footer {
     cursor: pointer
 }
 
-.hideBackBtn {
+.confirm {
+    background-color: #483EFF;
+    color: white;
+}
+
+.confirm:hover {
+    background-color: #928CFF;
+}
+
+.hideBtn {
    visibility: hidden;
 }

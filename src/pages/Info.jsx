@@ -7,7 +7,7 @@ function Home() {
     const [phone, setPhone] = useState("");
 
     return (
-        <div className="infoContainer">
+        <div className="formContainer">
             <h1>Personal info</h1>
             <h2>Please provide your name, email address, and phone number.</h2>
 

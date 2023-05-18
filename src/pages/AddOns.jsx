@@ -1,6 +1,10 @@
 function AddOns() {
+    
     return (
-        <h1>Pick add-ons</h1>
+        <div className="formContainer">
+            <h1>Pick add-ons</h1>
+            <h2>Add-ons help enhance your gaming experience.</h2>
+        </div>
     );
 }
 

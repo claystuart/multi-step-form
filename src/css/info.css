@@ -1,4 +1,4 @@
-.infoContainer {
+.formContainer {
     width: 343px;
     height: 367px;
     padding-left: 24px;
@@ -19,6 +19,7 @@ h2 {
     font-weight: normal;
     line-height: 25px;
     margin-top: 9px;
+    width: 295px;
 }
 
 form {

@@ -1,60 +1,61 @@
 .formContainer {
-    width: 343px;
-    height: 367px;
-    padding-left: 24px;
-    padding-top: 32px;
-    background-color: white;
-    border-radius: 8px;
+  width: 343px;
+  height: 367px;
+  padding-left: 24px;
+  padding-top: 32px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #022959;
+  font-size: 24px;
+  font-weight: bold;
+  color: #022959;
 }
 
 h2 {
-    color: #9699AA;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 25px;
-    margin-top: 9px;
-    width: 295px;
+  color: #9699aa;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 25px;
+  margin-top: 9px;
+  width: 295px;
 }
 
 form {
-    margin-top: 22px;
-    padding-bottom: 32px;
+  margin-top: 22px;
+  padding-bottom: 32px;
 }
 
 label {
-    width: 295px;
-    height: 57px;
-    display: block;
-    margin-top: 16px;
-    font-size: 12px;
-    font-weight: normal;
-    color: #022959
+  width: 295px;
+  height: 57px;
+  display: block;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #022959;
 }
 
 form:not(:first-child) {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 input[type="text"] {
-    display: block;
-    width: inherit;
-    height: 40px;
-    margin-top: 3px;
-    border-radius: 5px;
-    border: 1px solid #D6D9E6;
+  display: block;
+  width: inherit;
+  height: 40px;
+  margin-top: 3px;
+  border-radius: 5px;
+  border: 1px solid #d6d9e6;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-input:placeholder-shown{
-    padding-left: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #9699AA;
-
+input:placeholder-shown {
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #9699aa;
 }
-

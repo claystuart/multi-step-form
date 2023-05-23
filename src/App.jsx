@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+import { useEffect, useState } from "react"
 
 import Info from "./pages/PersonalInfo"
 import Plan from "./pages/Plan"

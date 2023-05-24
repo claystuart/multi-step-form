@@ -1,0 +1,54 @@
+.planContainer {
+  width: 343px;
+  height: 500px;
+  padding-left: 24px;
+  padding-top: 32px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.plan {
+  width: 295px;
+  height: 77px;
+  border-radius: 10px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.unselected {
+  border: 1px solid #d6d9e6;
+}
+
+.selected {
+  border: 1px solid #483eff;
+  background-color: #f8f9ff;
+}
+
+/* Extra margin on first label */
+.plan:first-of-type {
+  margin-top: 22px;
+}
+
+.plan-image {
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  margin-right: 14px;
+}
+
+.plan-choice {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.plan-price {
+  color: #9699aa;
+  font-size: 14px;
+  font-weight: 400;
+}

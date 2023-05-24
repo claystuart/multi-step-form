@@ -1,4 +1,5 @@
 import thankYou from "../images/icon-thank-you.svg"
+
 export default function ThankYou() {
     let thankYouStyle = {
         width: 343,

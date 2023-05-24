@@ -11,7 +11,6 @@ export default function Header() {
                 <Hyperlink to="/finish" className="link">4</Hyperlink>
             </nav>
         </header >
-
     );
 }
 
@@ -19,11 +18,12 @@ export default function Header() {
 function Hyperlink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-    
 
     return (
         <div className={isActive ? "activeDiv" : ""}>
-            <Link to={to} {...props}
+            <Link
+                to={to}
+                {...props}
                 className={isActive ? "link activeLink" : "link"}>
                 {children}
             </Link>

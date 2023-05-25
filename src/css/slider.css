@@ -1,0 +1,71 @@
+.sliderComponent {
+  width: 295px;
+  height: 48px;
+  background-color: #eeeef771;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* Monthly/Yearly styling */
+.subscriptionPeriod {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 24px;
+}
+
+.sliderOn {
+  color: #022959;
+}
+
+.sliderOff {
+  color: #9699aa;
+}
+
+/* As usual, don't show checkbox */
+.hideCheckBox {
+  display: none;
+}
+
+/* The container around the slider ball */
+.switchContainer {
+  position: relative;
+  width: 38px;
+  height: 20px;
+  margin-top: 0;
+}
+
+/* Create groove for slider ball */
+.sliderBall {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #022959;
+  transition: 0.4s;
+  border-radius: 12px;
+}
+
+/* Create actual slider ball */
+.sliderBall:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 5px;
+  top: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Styling for ball when checked*/
+input:checked + .sliderBall:before {
+  translate: 16px;
+}
+
+/* Styling for groove when checked */
+input:checked + .sliderBall {
+  /* background-color: red; */
+}

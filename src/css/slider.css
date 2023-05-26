@@ -26,8 +26,7 @@
 
 /* As usual, don't show checkbox */
 .hideCheckBox {
-  /* display: none; */
-  visibility: hidden;
+  display: none;
 }
 
 /* The container around the slider ball */

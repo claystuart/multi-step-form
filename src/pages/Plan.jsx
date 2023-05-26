@@ -36,39 +36,43 @@ function Plan() {
             <RadioOption
                 image={arcadeImage}
                 alt={"Arcade options"}
-                price={yearlyTerm == "true" ? 90 : 9}
+                price={yearlyTerm === "true" ? 90 : 9}
                 toggleRadios={toggleRadios}
-                timeSpan={yearlyTerm == "true" ? "yr" : "mo"}
-                styling={choice == "Arcade" ? "plan selected" : "plan unselected"}>Arcade</RadioOption>
+                timeSpan={yearlyTerm === "true" ? "yr" : "mo"}
+                discount={yearlyTerm === "true" ? "plan-two-months-visible" : "plan-two-months-invisible"}
+                styling={choice === "Arcade" ? "plan selected" : "plan unselected"}>Arcade</RadioOption>
 
             <RadioOption
                 image={advancedImage}
                 alt={"Advanced options"}
-                price={yearlyTerm == "true" ? 120 : 12}
+                price={yearlyTerm === "true" ? 120 : 12}
                 toggleRadios={toggleRadios}
-                timeSpan={yearlyTerm == "true" ? "yr" : "mo"}
-                styling={choice == "Advanced" ? "plan selected" : "plan unselected"}>Advanced</RadioOption>
+                timeSpan={yearlyTerm === "true" ? "yr" : "mo"}
+                discount={yearlyTerm === "true" ? "plan-two-months-visible" : "plan-two-months-invisible"}
+                styling={choice === "Advanced" ? "plan selected" : "plan unselected"}>Advanced</RadioOption>
 
             <RadioOption
                 image={proImage}
                 alt={"Pro options"}
-                price={yearlyTerm == "true" ? 150 : 15}
+                price={yearlyTerm === "true" ? 150 : 15}
                 toggleRadios={toggleRadios}
-                timeSpan={yearlyTerm == "true" ? "yr" : "mo"}
-                styling={choice == "Pro" ? "plan selected" : "plan unselected"}>Pro</RadioOption>
+                timeSpan={yearlyTerm === "true" ? "yr" : "mo"}
+                discount={yearlyTerm === "true" ? "plan-two-months-visible" : "plan-two-months-invisible"}
+                styling={choice === "Pro" ? "plan selected" : "plan unselected"}>Pro</RadioOption>
 
             <Slider setYearlyTerm={setYearlyTerm} yearlyTerm={yearlyTerm} />
         </div>
     )
 }
 
-function RadioOption({ image, price, children, toggleRadios, alt, styling, ...props }) {
+function RadioOption({ image, price, children, toggleRadios, alt, styling, discount, ...props }) {
     return (
         <label className={styling}>
             <img src={image} alt={alt} className="plan-image" />
             <div>
                 <p className="plan-choice">{children}</p>
                 <p className="plan-price">${price}/{props.timeSpan}</p>
+                <p className={discount}>2 months free</p>
             </div>
             <input type="radio" name="plan" className="hidden"
                 value={children}

@@ -7,15 +7,19 @@
 
 ## Summary <a name="introduction"></a>
 
-Overview of project
+Used React to create a fairly complicated, responsive order form maintaining state across pages.
 
 ## Some paragraph <a name="lessons"></a>
 
-The first paragraph text
+As a real react project, I learned a lot about react. The purpose of this section is to memorialize those lessons. I'm also going to include a smaller discussion about the slider section since that comes up a bit.
 
-### Sub paragraph <a name="lesson1"></a>
+### Getting Started <a name="lesson1"></a>
 
-This is a sub paragraph, formatted in heading 3 style
+1. npm create vite@latest (use . to give project same name as folder)
+2. choose JS & SWC
+3. cd into folder
+4. npm install
+5. npm run dev to get it up and running
 
 # Getting Started with Create React App <a name="react"></a>
 

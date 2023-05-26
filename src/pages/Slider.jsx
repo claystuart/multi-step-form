@@ -3,7 +3,7 @@ import "../css/slider.css"
 function Slider({ yearlyTerm, setYearlyTerm }) {
 
     return (
-        <section className="sliderComponent">
+        <div className="sliderComponent">
             <p className={yearlyTerm === "true" ? "sliderOff" : "sliderOn"}>Monthly</p>
             <label className="switchContainer">
                 <input type="checkbox"
@@ -14,7 +14,7 @@ function Slider({ yearlyTerm, setYearlyTerm }) {
                 <b className="sliderBall" />
             </label>
             <p className={yearlyTerm === "true" ? "sliderOn" : "sliderOff"}>Yearly</p>
-        </section>
+        </div>
     )
 }
 

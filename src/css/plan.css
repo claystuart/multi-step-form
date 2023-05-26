@@ -53,14 +53,10 @@
   font-weight: 400;
 }
 
-.plan-two-months-visible {
+.showDiscount {
   font-size: 12px;
   margin-top: 3px;
   font-weight: 400;
   line-height: 145%;
   word-spacing: 1px;
-}
-
-.plan-two-months-invisible {
-  display: none;
 }

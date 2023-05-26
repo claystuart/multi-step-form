@@ -65,7 +65,8 @@ input:checked + .sliderBall:before {
   translate: 16px;
 }
 
-/* Styling for groove when checked */
+/* Styling for groove when checked 
 input:checked + .sliderBall {
-  /* background-color: red; */
+  background-color: red;
 }
+*/

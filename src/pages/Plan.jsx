@@ -47,11 +47,11 @@ function Plan() {
 
     }, [choice, yearlyTerm])
 
+    // Function for selecting the desired plan: arcade, advanced, or pro
     function toggleRadios() {
-        document.querySelectorAll('input[type="radio"]').forEach(x => {
-            if (x.checked)
-                setChoice(x.value)
-        })
+        document.querySelectorAll('input[type="radio"]')
+            .forEach(radioElement =>
+                radioElement.checked && setChoice(radioElement.value))
     }
 
     return (

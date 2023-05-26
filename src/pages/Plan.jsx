@@ -47,8 +47,8 @@ function Plan() {
 
     }, [choice, yearlyTerm])
 
-    // Function for selecting the desired plan: arcade, advanced, or pro
-    function toggleRadios() {
+    // Select and highlight the desired plan: arcade, advanced, or pro
+    function choosePlan() {
         document.querySelectorAll('input[type="radio"]')
             .forEach(radioElement =>
                 radioElement.checked && setChoice(radioElement.value))
@@ -62,7 +62,7 @@ function Plan() {
             <RadioOption
                 image={{ img: arcadeImage, alt: "Arcade options" }}
                 price={arcade}
-                toggleRadios={toggleRadios}
+                choosePlan={choosePlan}
                 yearlyTerm={yearlyTerm}
                 choice={choice}>Arcade
             </RadioOption>
@@ -70,7 +70,7 @@ function Plan() {
             <RadioOption
                 image={{ img: advancedImage, alt: "Advanced options" }}
                 price={advanced}
-                toggleRadios={toggleRadios}
+                choosePlan={choosePlan}
                 yearlyTerm={yearlyTerm}
                 choice={choice}>Advanced
             </RadioOption>
@@ -78,7 +78,7 @@ function Plan() {
             <RadioOption
                 image={{ img: proImage, alt: "Pro options" }}
                 price={pro}
-                toggleRadios={toggleRadios}
+                choosePlan={choosePlan}
                 yearlyTerm={yearlyTerm}
                 choice={choice}>Pro
             </RadioOption>
@@ -88,7 +88,7 @@ function Plan() {
     )
 }
 
-function RadioOption({ children, choice, image, toggleRadios, yearlyTerm, ...props }) {
+function RadioOption({ children, choice, image, choosePlan, yearlyTerm, ...props }) {
     return (
         <label className={choice === children ? "plan selected" : "plan unselected"}>
             <img src={image.img} alt={image.alt} className="plan-image" />
@@ -98,7 +98,7 @@ function RadioOption({ children, choice, image, toggleRadios, yearlyTerm, ...pro
                 <p className={yearlyTerm === "true" ? "showDiscount" : "hidden"}>2 months free</p>
             </div>
             <input type="radio" name="plan" className="hidden" value={children}
-                onChange={e => toggleRadios(e.target.value)} />
+                onChange={e => choosePlan(e.target.value)} />
         </label>
     )
 }

@@ -6,15 +6,10 @@ import { useState, useEffect } from "react"
 import Slider from "./Slider.jsx"
 
 function Plan() {
-
-    const [arcadePrice, setArcadePrice] = useState(() =>
-        localStorage.getItem("arcadePrice") ? localStorage.getItem("arcadePrice") : 9)
-
-    const [advancedPrice, setadvancedPrice] = useState(() =>
-        localStorage.getItem("advancedPrice") ? localStorage.getItem("advancedPrice") : 12)
-
-    const [proPrice, setproPrice] = useState(() =>
-        localStorage.getItem("proPrice") ? localStorage.getItem("proPrice") : 15)
+    const [yearlyTerm, setYearlyTerm] = useState(() => {
+        let temp = localStorage.getItem("yearlyTerm")
+        return temp === "true" ? "true" : "false"
+    })
 
     const [choice, setChoice] = useState(() => {
         let temp = localStorage.getItem("choice")
@@ -22,11 +17,9 @@ function Plan() {
     })
 
     useEffect(() => {
-        localStorage.setItem("arcadePrice", arcadePrice)
-        localStorage.setItem("advancedPrice", advancedPrice)
-        localStorage.setItem("proPrice", proPrice)
         localStorage.setItem("choice", choice)
-    }, [arcadePrice, advancedPrice, proPrice, choice])
+        localStorage.setItem("yearlyTerm", yearlyTerm)
+    }, [choice, yearlyTerm])
 
     function toggleRadios() {
         document.querySelectorAll('input[type="radio"]').forEach(x => {
@@ -43,27 +36,28 @@ function Plan() {
             <RadioOption
                 image={arcadeImage}
                 alt={"Arcade options"}
-                price={arcadePrice}
+                price={yearlyTerm == "true" ? 90 : 9}
                 toggleRadios={toggleRadios}
-                timeSpan={"mo"} // Will need to change upon toggle slider
-                styling={choice === "Arcade" ? "plan selected" : "plan unselected"}>Arcade</RadioOption>
+                timeSpan={yearlyTerm == "true" ? "yr" : "mo"}
+                styling={choice == "Arcade" ? "plan selected" : "plan unselected"}>Arcade</RadioOption>
 
             <RadioOption
                 image={advancedImage}
                 alt={"Advanced options"}
-                price={advancedPrice}
+                price={yearlyTerm == "true" ? 120 : 12}
                 toggleRadios={toggleRadios}
-                timeSpan={"mo"} // Will need to change upon toggle slider
-                styling={choice === "Advanced" ? "plan selected" : "plan unselected"}>Advanced</RadioOption>
+                timeSpan={yearlyTerm == "true" ? "yr" : "mo"}
+                styling={choice == "Advanced" ? "plan selected" : "plan unselected"}>Advanced</RadioOption>
 
             <RadioOption
                 image={proImage}
                 alt={"Pro options"}
-                price={proPrice}
+                price={yearlyTerm == "true" ? 150 : 15}
                 toggleRadios={toggleRadios}
-                timeSpan={"mo"} // Will need to change upon toggle slider
-                styling={choice === "Pro" ? "plan selected" : "plan unselected"}>Pro</RadioOption>
-            <Slider />
+                timeSpan={yearlyTerm == "true" ? "yr" : "mo"}
+                styling={choice == "Pro" ? "plan selected" : "plan unselected"}>Pro</RadioOption>
+
+            <Slider setYearlyTerm={setYearlyTerm} yearlyTerm={yearlyTerm} />
         </div>
     )
 }

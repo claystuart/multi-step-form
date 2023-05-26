@@ -10,23 +10,24 @@
 }
 
 /* Monthly/Yearly styling */
-.subscriptionPeriod {
+.sliderOn {
   font-size: 14px;
   font-weight: 500;
   margin: 24px;
-}
-
-.sliderOn {
   color: #022959;
 }
 
 .sliderOff {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 24px;
   color: #9699aa;
 }
 
 /* As usual, don't show checkbox */
 .hideCheckBox {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
 }
 
 /* The container around the slider ball */

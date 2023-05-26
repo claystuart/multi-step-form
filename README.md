@@ -1,25 +1,39 @@
 # Table of contents
 
 1. [Summary](#introduction)
-2. [Lessons Leared](#lessons)
-   1. [Lesson 1](#lesson1)
+2. [Lessons Learned](#lessons)
+
+   1. [Create a react project with vite](#lesson1)
+   2. [Including various resources](#lesson2)
+   3. [Routing](#lesson3)
+
 3. [React Boilerplate](#react)
 
 ## Summary <a name="introduction"></a>
 
 Used React to create a fairly complicated, responsive order form maintaining state across pages.
 
-## Some paragraph <a name="lessons"></a>
+## Lessons Learned <a name="lessons"></a>
 
-As a real react project, I learned a lot about react. The purpose of this section is to memorialize those lessons. I'm also going to include a smaller discussion about the slider section since that comes up a bit.
+The purpose of this section is to memorialize those lessons. I'm also going to include a smaller discussion about the slider section since that comes up a bit.
 
-### Getting Started <a name="lesson1"></a>
+### Creating a react project using vite <a name="lesson1"></a>
 
 1. npm create vite@latest (use . to give project same name as folder)
 2. choose JS & SWC
 3. cd into folder
 4. npm install
 5. npm run dev to get it up and running
+
+### Including Various Resources <a name="lesson2"></a>
+
+1. `import App from "./App"` - include jsx
+2. `import "./css/style.css"` - include css
+3. `import { BrowserRouter } from "react-router-dom"` - include top-level routing in index.js
+4. `import { Routes, Route } from "react-router-dom"` - include routing switch (Routes) in App.jsx
+5. `import { useState, useEffect } from "react"` - include hooks for state and effect
+
+### Routing <a name="lesson3"></a>
 
 # Getting Started with Create React App <a name="react"></a>
 

@@ -6,8 +6,12 @@
    1. [Create a react project with vite](#lesson1)
    2. [Including various resources](#lesson2)
    3. [Routing](#lesson3)
+   4. [useState](#lesson4)
+   5. [useEffect](#lesson5)
+   6. [Slider Control](#lesson6)
 
-3. [React Boilerplate](#react)
+3. [Gothas](#gotchas)
+4. [React Boilerplate](#react)
 
 ## Summary <a name="introduction"></a>
 
@@ -34,6 +38,20 @@ The purpose of this section is to memorialize those lessons. I'm also going to i
 5. `import { useState, useEffect } from "react"` - include hooks for state and effect
 
 ### Routing <a name="lesson3"></a>
+
+### useState <a name="lesson4"></a>
+
+### useEffect <a name="lesson5"></a>
+
+### Slider Control <a name="lesson6"></a>
+
+# Gotchas <a name="gotchas"></a>
+
+## React-isms that trip me up.
+
+1. Strict typing: you must compare with === and string to string
+2. Pass props down from high up
+3. useEffect - if you setSomething(foo) - the updated foo value won't be available in the current useEffect block. It will become available next call.
 
 # Getting Started with Create React App <a name="react"></a>
 

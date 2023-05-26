@@ -1,0 +1,67 @@
+.addonContainer {
+  width: 343px;
+  height: 367px;
+  padding-left: 24px;
+  padding-top: 32px;
+  background-color: white;
+  border-radius: 8px;
+  height: 383px;
+}
+.addon {
+  width: 295px;
+  height: 62px;
+  margin-top: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d6d9e6;
+}
+
+.addonChecked {
+  border: 1px solid #483eff;
+}
+
+.addon:first-of-type {
+  margin-top: 22px;
+}
+
+.addon-options {
+  margin: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.addon-options:checked {
+  background-color: #483eff;
+}
+
+.addon-explanation {
+  width: 164px;
+  height: 39px;
+  margin: 0;
+}
+
+.heading {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #022959;
+}
+
+.subheading {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9699aa;
+  line-height: 20px;
+  margin-top: 3px;
+}
+
+.price {
+  width: 43px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 16px;
+  margin-left: auto;
+  color: #483eff;
+}

@@ -10,7 +10,7 @@
    5. [useEffect](#lesson5)
    6. [Slider Control](#lesson6)
 
-3. [Gothas](#gotchas)
+3. [Gotchas](#gotchas)
 4. [React Boilerplate](#react)
 
 ## Summary <a name="introduction"></a>

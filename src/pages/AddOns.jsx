@@ -11,19 +11,31 @@ export default function AddOns() {
     const [onlinePrice, setOnlinePrice] = useState(() => {
         let multiplier = yearlyTerm === "true" ? 10 : 1
         let temp = localStorage.getItem("onlinePrice")
-        return temp ? multiplier * 1 : "0"
+        if (temp === "0") {
+            return "0"
+        }
+        else
+            return multiplier * 2
     })
 
     const [storagePrice, setStoragePrice] = useState(() => {
         let multiplier = yearlyTerm === "true" ? 10 : 1
         let temp = localStorage.getItem("storagePrice")
-        return temp ? multiplier * 2 : "0"
+        if (temp === "0") {
+            return "0"
+        }
+        else
+            return multiplier * 2
     })
 
     const [profilePrice, setProfilePrice] = useState(() => {
         let multiplier = yearlyTerm === "true" ? 10 : 1
         let temp = localStorage.getItem("profilePrice")
-        return temp ? multiplier * 2 : "0"
+        if (temp === "0") {
+            return "0"
+        }
+        else
+            return multiplier * 2
     })
 
     useEffect(() => {

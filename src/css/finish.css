@@ -7,3 +7,78 @@
   border-radius: 8px;
   height: 383px;
 }
+
+.base-plan-summary-container {
+  margin-top: 38px;
+  width: 263px;
+  height: 39px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.base-plan {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #022959;
+}
+
+.changeButton {
+  font-size: 14px;
+  color: #9699aa;
+  line-height: 20px;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  margin-top: 3px;
+}
+
+.base-plan-total {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #022959;
+}
+
+hr {
+  margin-top: 12px;
+  width: 263px;
+  border: none;
+  border-top: 1px solid #d6d9e6;
+}
+
+.addOn-summary {
+  width: 263px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.gray-item {
+  font-size: 14px;
+  color: #9699aa;
+  line-height: 20px;
+}
+
+.addOn-summary-item-cost {
+  font-size: 14px;
+  line-height: 20px;
+  color: #022959;
+}
+.total-summary-container {
+  margin-top: 40px;
+  width: 263px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-cost {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #483eff;
+}

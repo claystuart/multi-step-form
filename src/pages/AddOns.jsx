@@ -45,8 +45,6 @@ export default function AddOns() {
     }, [onlinePrice, storagePrice, profilePrice])
 
     function toggleOption(checkbox) {
-        // console.log(checkbox.value, checkbox.checked)
-
         // Handle uncheck
         if (checkbox.checked === false) {
             switch (checkbox.value) {

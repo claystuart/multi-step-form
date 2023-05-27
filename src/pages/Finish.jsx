@@ -20,6 +20,36 @@ export default function Finish() {
     const [pro, setPro] = useState(() => localStorage.getItem("pro")
         ? localStorage.getItem("pro") : "15")
 
+    const [onlinePrice, setOnlinePrice] = useState(() => {
+        let multiplier = yearlyTerm === "true" ? 10 : 1
+        let temp = localStorage.getItem("onlinePrice")
+        if (temp === "0") {
+            return "0"
+        }
+        else
+            return multiplier * 2
+    })
+
+    const [storagePrice, setStoragePrice] = useState(() => {
+        let multiplier = yearlyTerm === "true" ? 10 : 1
+        let temp = localStorage.getItem("storagePrice")
+        if (temp === "0") {
+            return "0"
+        }
+        else
+            return multiplier * 2
+    })
+
+    const [profilePrice, setProfilePrice] = useState(() => {
+        let multiplier = yearlyTerm === "true" ? 10 : 1
+        let temp = localStorage.getItem("profilePrice")
+        if (temp === "0") {
+            return "0"
+        }
+        else
+            return multiplier * 2
+    })
+
     useEffect(() => {
         localStorage.setItem("yearlyTerm", yearlyTerm)
 
@@ -39,6 +69,14 @@ export default function Finish() {
         temp = yearlyTerm === "true" ? 150 : 15
         setPro(temp)
         localStorage.setItem("pro", temp)
+
+        // set onlinePrice
+        temp = yearlyTerm === "true" ? 150 : 15
+        setPro(temp)
+        localStorage.setItem("pro", temp)
+
+
+
     }, [yearlyTerm])
 
     function calculateBasePrice() {
@@ -81,17 +119,23 @@ export default function Finish() {
                 <hr />
 
                 <section className="addon-summary-container">
-                    <div className="addOn-summary">
+                    <div className={onlinePrice > 0 ? "addOn-summary" : "addOn-hide"}>
                         <p className="gray-item">Online service</p>
-                        <p className="addOn-summary-item-cost">+$1/mo</p>
+                        <p className="addOn-summary-item-cost">
+                            +$/{yearlyTerm === "true" ? "yr" : "mo"}
+                        </p>
                     </div>
-                    <div className="addOn-summary">
+                    <div className={storagePrice > 0 ? "addOn-summary" : "addOn-hide"}>
                         <p className="gray-item">Larger Storage</p>
-                        <p className="addOn-summary-item-cost">+$2/mo</p>
+                        <p className="addOn-summary-item-cost">
+                            +$2/{yearlyTerm === "true" ? "yr" : "mo"}
+                        </p>
                     </div>
-                    <div className="addOn-summary">
+                    <div className={profilePrice > 0 ? "addOn-summary" : "addOn-hide"}>
                         <p className="gray-item">Customizable profile</p>
-                        <p className="addOn-summary-item-cost">+$2/mo</p>
+                        <p className="addOn-summary-item-cost">
+                            +$2/{yearlyTerm === "true" ? "yr" : "mo"}
+                        </p>
                     </div>
 
                 </section>

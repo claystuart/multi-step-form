@@ -9,18 +9,21 @@ export default function AddOns() {
     })
 
     const [onlinePrice, setOnlinePrice] = useState(() => {
+        let multiplier = yearlyTerm === "true" ? 10 : 1
         let temp = localStorage.getItem("onlinePrice")
-        return temp ? temp : "0"
+        return temp ? multiplier * 1 : "0"
     })
 
     const [storagePrice, setStoragePrice] = useState(() => {
+        let multiplier = yearlyTerm === "true" ? 10 : 1
         let temp = localStorage.getItem("storagePrice")
-        return temp ? temp : "0"
+        return temp ? multiplier * 2 : "0"
     })
 
     const [profilePrice, setProfilePrice] = useState(() => {
+        let multiplier = yearlyTerm === "true" ? 10 : 1
         let temp = localStorage.getItem("profilePrice")
-        return temp ? temp : "0"
+        return temp ? multiplier * 2 : "0"
     })
 
     useEffect(() => {
@@ -107,7 +110,7 @@ function AddOn({ children, h1, h2, price, toggleOption, yearlyTerm, ...props }) 
                 <p className="heading">{h1}</p>
                 <p className="subheading">{h2}</p>
             </label>
-            <p className="price">+${price}/{yearlyTerm === "true" ? "yr" : "mo"}</p>
+            <p className="price">+${yearlyTerm === "true" ? price : price}/{yearlyTerm === "true" ? "yr" : "mo"}</p>
         </div>
     )
 }

@@ -96,11 +96,11 @@ export default function Finish() {
         return temp
     }
 
-    function calculateAddonPrice() {
-
-    }
-
     const changeTerm = () => yearlyTerm === "true" ? setYearlyTerm("false") : setYearlyTerm("true")
+
+    function finalPrice() {
+        return calculateBasePrice() + parseInt(onlinePrice) + parseInt(storagePrice) + parseInt(profilePrice)
+    }
 
     return (
         <div className="finishContainer">
@@ -122,19 +122,19 @@ export default function Finish() {
                     <div className={onlinePrice > 0 ? "addOn-summary" : "addOn-hide"}>
                         <p className="gray-item">Online service</p>
                         <p className="addOn-summary-item-cost">
-                            +$/{yearlyTerm === "true" ? "yr" : "mo"}
+                            +{onlinePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
                         </p>
                     </div>
                     <div className={storagePrice > 0 ? "addOn-summary" : "addOn-hide"}>
                         <p className="gray-item">Larger Storage</p>
                         <p className="addOn-summary-item-cost">
-                            +$2/{yearlyTerm === "true" ? "yr" : "mo"}
+                            +${storagePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
                         </p>
                     </div>
                     <div className={profilePrice > 0 ? "addOn-summary" : "addOn-hide"}>
                         <p className="gray-item">Customizable profile</p>
                         <p className="addOn-summary-item-cost">
-                            +$2/{yearlyTerm === "true" ? "yr" : "mo"}
+                            +${profilePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
                         </p>
                     </div>
 
@@ -142,7 +142,7 @@ export default function Finish() {
 
                 <section className="total-summary-container">
                     <p className="gray-item">Total (per {yearlyTerm === "true" ? "year" : "month"})</p>
-                    <p className="total-cost">+${calculateBasePrice() + 1}/{yearlyTerm === "true" ? "yr" : "mo"}</p>
+                    <p className="total-cost">+${finalPrice()}/{yearlyTerm === "true" ? "yr" : "mo"}</p>
                 </section>
             </div>
         </div>

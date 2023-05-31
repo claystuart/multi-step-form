@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 * {
   padding: 0;
@@ -6,9 +6,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --denim: #022959;
+}
+
 body {
-  font-family: 'Ubuntu', sans-serif;
-  background-color: #9699AA;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #9699aa;
 }
 
 #root {
@@ -17,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #EFF5FF;
+  background-color: #eff5ff;
 }
 
 main {
@@ -27,12 +31,27 @@ main {
   transform: translateX(-50%);
 }
 
-@media(min-width: 768px) {
-  body{
-    background-color: #EFF5FF;
+@media (min-width: 768px) {
+  body {
+    background-color: #eff5ff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  #root{
+  #root {
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 940px;
+    min-height: 600px;
+    border-radius: 10px;
+  }
+
+  main {
+    position: static;
+    transform: none;
   }
 }

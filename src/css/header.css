@@ -1,43 +1,85 @@
 header {
-    min-width: 375px;
-    height: 172px;
-    background-image: url(../images/bg-sidebar-mobile.svg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-width: 375px;
+  height: 172px;
+  background-image: url(../images/bg-sidebar-mobile.svg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar {
-    width: 180px;
-    height: 33px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 32px;
-    margin-inline: auto;
+  width: 180px;
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-inline: auto;
 }
 
 .link {
-    width: 33px;
-    height: 33px;
-    border: 1px solid white;
-    border-radius: 50%;
-    background-color: transparent;
-    display: grid;
-    place-items: center;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
+  width: 33px;
+  height: 33px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
 }
 
 .activeLink {
-    border: none;
-    color: black;
-} 
+  border: none;
+  color: black;
+}
 
 .activeDiv {
-    background: #BEE2FD;
-    border-radius: 50%;
+  background: #bee2fd;
+  border-radius: 50%;
+}
+
+.desktop-information {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header {
+    background-image: url(../images/bg-sidebar-desktop.svg);
+    background-position-y: bottom;
+    min-width: 274px;
+    height: 568px;
+    margin: 16px;
+    border-radius: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 153px;
+    height: 228px;
+    margin-left: 54px;
+  }
+
+  .activeDiv {
+    width: 33px;
+    height: 33px;
+    border: none;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
+  .desktop-information {
+    height: 33px;
+    width: 153px;
+    display: block;
+    margin: 0;
+    margin-left: 16px;
+    outline: 1px solid orange;
+  }
 }

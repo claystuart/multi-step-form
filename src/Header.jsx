@@ -20,13 +20,19 @@ function Hyperlink({ to, children, ...props }) {
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
     return (
-        <div className={isActive ? "activeDiv" : ""}>
-            <Link
-                to={to}
-                {...props}
-                className={isActive ? "link activeLink" : "link"}>
-                {children}
-            </Link>
-        </div>
+        <div className="desktop">
+            <div className={isActive ? "activeDiv" : ""}>
+                <Link
+                    to={to}
+                    {...props}
+                    className={isActive ? "link activeLink" : "link"}>
+                    {children}
+                </Link>
+            </div>
+            <label className="desktop-information">
+                <p>Step 1</p>
+                <p>Your info</p>
+            </label>
+        </div >
     )
 }

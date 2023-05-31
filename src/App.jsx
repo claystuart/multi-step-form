@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom"
 import Info from "./pages/PersonalInfo"
 import Plan from "./pages/Plan"
 import Addons from "./pages/AddOns"
-import NoPage from "./pages/404"
 import Finish from "./pages/Finish"
 import ThankYou from "./pages/ThankYou"
+import NoPage from "./pages/404"
 
 import Header from "./Header"
 import Footer from "./Footer"
@@ -27,7 +27,6 @@ export default function App() {
                 </Routes>
                 {/* End Routing */}
             </main>
-
             <Footer />
         </>
     )

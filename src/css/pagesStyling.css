@@ -10,7 +10,7 @@
 h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #022959;
+  color: var(--denim);
 }
 
 h2 {
@@ -34,7 +34,7 @@ label {
   margin-top: 16px;
   font-size: 12px;
   font-weight: normal;
-  color: #022959;
+  color: var(--denim);
 }
 
 form:not(:first-child) {
@@ -58,4 +58,14 @@ input:placeholder-shown {
   font-size: 15px;
   font-weight: 500;
   color: #9699aa;
+}
+
+@media (min-width: 768px) {
+  .formContainer {
+    background-color: transparent;
+    width: 450px;
+    padding: 0;
+    margin-left: 100px;
+    margin-top: 56px;
+  }
 }

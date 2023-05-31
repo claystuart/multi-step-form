@@ -1,4 +1,4 @@
-import thankYou from "../images/icon-thank-you.svg"
+import thankYouImage from "../images/icon-thank-you.svg"
 
 export default function ThankYou() {
     let thankYouStyle = {
@@ -26,7 +26,7 @@ export default function ThankYou() {
 
     return (
         <div style={thankYouStyle}>
-            <img src={thankYou} style={imgStyle} alt="Thank You" />
+            <img src={thankYouImage} style={imgStyle} alt="Thank You" />
             <h1 style={{ marginTop: 24 }}>Thank you!</h1>
             <h2 style={noteStyle}>Thanks for confirming your subscription! We hope you have fun
                 using our platform. If you ever need support, please feel free

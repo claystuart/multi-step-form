@@ -13,7 +13,7 @@ import Footer from "./Footer"
 export default function App() {
 
     return (
-        <>
+        <div className="top-container">
             <Header />
             <main>
                 {/* Begin Routing */}
@@ -28,6 +28,6 @@ export default function App() {
                 {/* End Routing */}
             </main>
             <Footer />
-        </>
+        </div>
     )
 }

@@ -15,7 +15,7 @@ body {
   background-color: #9699aa;
 }
 
-#root {
+.top-container {
   min-width: 375px;
   min-height: 100vh;
   display: flex;
@@ -31,7 +31,7 @@ main {
   transform: translateX(-50%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 940px) {
   body {
     background-color: #eff5ff;
     width: 100vw;
@@ -41,17 +41,30 @@ main {
     align-items: center;
   }
 
-  #root {
+  .top-container {
     background-color: white;
-    display: flex;
-    flex-direction: row;
     width: 940px;
     min-height: 600px;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 290px auto;
+    grid-template-rows: 372 auto;
+    grid-template-areas:
+      "header form"
+      "header footer ";
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  footer {
+    grid-area: footer;
   }
 
   main {
     position: static;
     transform: none;
+    grid-area: form;
   }
 }

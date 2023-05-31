@@ -16,8 +16,11 @@ export default function Header() {
 
 // Wrapper to add isActive path resolution for highlighting Active link
 function Hyperlink({ to, children, ...props }) {
+    // useResolvePath returns an object with a path property to url being resolved
     const resolvedPath = useResolvedPath(to)
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+
+    // useMatch returns object if path matches current location and null otherwise
+    const isActive = useMatch({ path: resolvedPath.pathname })
 
     return (
         <div className="desktop">

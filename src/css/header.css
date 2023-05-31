@@ -47,7 +47,7 @@ header {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 940px) {
   header {
     background-image: url(../images/bg-sidebar-desktop.svg);
     background-position-y: bottom;

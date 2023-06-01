@@ -70,3 +70,10 @@ input:checked + .sliderBall {
   background-color: red;
 }
 */
+
+@media (min-width: 940px) {
+  .sliderComponent {
+    margin-top: 32px;
+    width: 450px;
+  }
+}

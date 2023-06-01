@@ -59,29 +59,32 @@ function Plan() {
             <h1> Select your plan</h1>
             <h2>You have the option of monthly or yearly billing.</h2>
 
-            <RadioOption
-                image={{ img: arcadeImage, alt: "Arcade options" }}
-                price={arcade}
-                choosePlan={choosePlan}
-                yearlyTerm={yearlyTerm}
-                choice={choice}>Arcade
-            </RadioOption>
+            <div className="radioContainer">
+                <RadioOption
+                    image={{ img: arcadeImage, alt: "Arcade options" }}
+                    price={arcade}
+                    choosePlan={choosePlan}
+                    yearlyTerm={yearlyTerm}
+                    choice={choice}>Arcade
+                </RadioOption>
 
-            <RadioOption
-                image={{ img: advancedImage, alt: "Advanced options" }}
-                price={advanced}
-                choosePlan={choosePlan}
-                yearlyTerm={yearlyTerm}
-                choice={choice}>Advanced
-            </RadioOption>
+                <RadioOption
+                    image={{ img: advancedImage, alt: "Advanced options" }}
+                    price={advanced}
+                    choosePlan={choosePlan}
+                    yearlyTerm={yearlyTerm}
+                    choice={choice}>Advanced
+                </RadioOption>
 
-            <RadioOption
-                image={{ img: proImage, alt: "Pro options" }}
-                price={pro}
-                choosePlan={choosePlan}
-                yearlyTerm={yearlyTerm}
-                choice={choice}>Pro
-            </RadioOption>
+                <RadioOption
+                    image={{ img: proImage, alt: "Pro options" }}
+                    price={pro}
+                    choosePlan={choosePlan}
+                    yearlyTerm={yearlyTerm}
+                    choice={choice}>Pro
+                </RadioOption>
+            </div>
+
 
             <Slider setYearlyTerm={setYearlyTerm} yearlyTerm={yearlyTerm} />
         </div>

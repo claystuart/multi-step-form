@@ -61,7 +61,8 @@ header {
     flex-direction: column;
     width: 153px;
     height: 228px;
-    margin-left: 54px;
+    margin-left: 32px;
+    margin-top: 40px;
   }
 
   .activeDiv {
@@ -77,9 +78,26 @@ header {
   .desktop-information {
     height: 33px;
     width: 153px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0;
     margin-left: 16px;
-    outline: 1px solid orange;
+  }
+
+  .littleLabel {
+    color: #abbcff;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 14px;
+  }
+
+  .bigLabel {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    line-height: 16px;
+    text-transform: uppercase;
   }
 }

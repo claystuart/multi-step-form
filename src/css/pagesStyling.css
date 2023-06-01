@@ -1,4 +1,4 @@
-.formContainer {
+.infoContainer {
   width: 343px;
   height: 367px;
   padding-left: 24px;
@@ -27,7 +27,7 @@ form {
   padding-bottom: 32px;
 }
 
-label {
+.infoLabel {
   width: 295px;
   height: 57px;
   display: block;
@@ -35,10 +35,6 @@ label {
   font-size: 12px;
   font-weight: normal;
   color: var(--denim);
-}
-
-form:not(:first-child) {
-  margin-top: 0;
 }
 
 input[type="text"] {
@@ -60,12 +56,67 @@ input:placeholder-shown {
   color: #9699aa;
 }
 
-@media (min-width: 768px) {
-  .formContainer {
+@media (min-width: 940px) {
+  .infoContainer {
     background-color: transparent;
-    width: 450px;
+    width: auto;
     padding: 0;
     margin-left: 100px;
     margin-top: 56px;
+    width: 450px;
+    height: 372px;
+  }
+
+  h1 {
+    font-size: 32px;
+    width: 450px;
+  }
+
+  h2 {
+    width: 450px;
+    margin-top: 11px;
+  }
+
+  form {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoLabel {
+    font-size: 14px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  .infoLabel:first-of-type {
+    margin-top: 40px;
+  }
+
+  input[type="text"] {
+    padding-left: 16px;
+    font-size: 16px;
+    height: 48px;
+    cursor: pointer;
+    color: var(--denim);
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  input:placeholder-shown {
+    font-size: 16px;
+    padding-left: 16px;
+  }
+
+  input[type="text"]:invalid {
+    border: 1px solid red;
+  }
+
+  input[type="text"]:invalid::before {
+    content: "This field is required";
+    padding-bottom: 30px;
   }
 }

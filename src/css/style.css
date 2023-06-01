@@ -52,6 +52,7 @@ main {
     grid-template-areas:
       "header form"
       "header footer ";
+    justify-content: start;
   }
 
   header {

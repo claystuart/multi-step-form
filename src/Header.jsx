@@ -5,10 +5,14 @@ export default function Header() {
     return (
         <header>
             <nav className="navbar">
-                <Hyperlink to="/multi-step-form" className="link">1</Hyperlink>
-                <Hyperlink to="/plan" className="link">2</Hyperlink>
-                <Hyperlink to="/addons" className="link">3</Hyperlink>
-                <Hyperlink to="/finish" className="link">4</Hyperlink>
+                <Hyperlink to="/multi-step-form" className="link"
+                    bigLabel="your info">1</Hyperlink>
+                <Hyperlink to="/plan" className="link"
+                    bigLabel="select plan">2</Hyperlink>
+                <Hyperlink to="/addons" className="link"
+                    bigLabel="add-ons">3</Hyperlink>
+                <Hyperlink to="/finish" className="link"
+                    bigLabel="summary">4</Hyperlink>
             </nav>
         </header >
     );
@@ -33,8 +37,8 @@ function Hyperlink({ to, children, ...props }) {
                 </Link>
             </div>
             <label className="desktop-information">
-                <p>Step 1</p>
-                <p>Your info</p>
+                <p className="littleLabel">Step {children}</p>
+                <p className="bigLabel">{props.bigLabel}</p>
             </label>
         </div >
     )

@@ -23,33 +23,36 @@ function Home() {
     }, [name, email, phone])
 
     return (
-        <div className="formContainer">
+        <div className="infoContainer">
             <h1>Personal info</h1>
             <h2>Please provide your name, email address, and phone number.</h2>
 
             <form>
-                <label htmlFor='name'>Name
+                <label className='infoLabel' htmlFor='name'>Name
                     <input type="text"
                         id='name'
                         value={name}
                         placeholder="e.g. Stephen King"
+                        required
                         onChange={e => setName(e.target.value)} />
                 </label>
 
-                <label htmlFor='email'>Email Address
+                <label className='infoLabel' htmlFor='email'>Email Address
                     <input type="text"
                         id='email'
                         placeholder="e.g. stephenking@lorem.com"
                         value={email}
+                        required
                         onChange={e => setEmail(e.target.value)}
                     />
                 </label>
 
-                <label htmlFor='phone'>Phone Number
+                <label className='infoLabel' htmlFor='phone'>Phone Number
                     <input type="text"
                         id="phone"
                         placeholder="e.g. +1 234 567 890"
                         value={phone}
+                        required
                         onChange={e => setPhone(e.target.value)}
                     />
                 </label>

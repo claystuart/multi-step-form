@@ -1,11 +1,14 @@
 .finishContainer {
   width: 343px;
-  height: 365px;
+  height: 383px;
   padding-left: 24px;
   padding-top: 32px;
   background-color: white;
   border-radius: 8px;
-  height: 383px;
+}
+
+.lightGrayBackground {
+  background-color: #f8f9ff;
 }
 
 .base-plan-summary-container {
@@ -21,7 +24,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  color: #022959;
+  color: var(--denim);
 }
 
 .changeButton {
@@ -39,7 +42,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
-  color: #022959;
+  color: var(--denim);
 }
 
 hr {
@@ -70,7 +73,7 @@ hr {
 .addOn-summary-item-cost {
   font-size: 14px;
   line-height: 20px;
-  color: #022959;
+  color: var(--denim);
 }
 .total-summary-container {
   margin-top: 40px;
@@ -85,4 +88,60 @@ hr {
   font-weight: bold;
   line-height: 20px;
   color: #483eff;
+}
+
+@media (min-width: 940px) {
+  .finishContainer {
+    padding: 0;
+    margin-left: 100px;
+    margin-top: 56px;
+    width: 450px;
+    height: 372px;
+  }
+
+  .lightGrayBackground {
+    width: 450px;
+    height: 182px;
+    padding-inline: 24px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .base-plan-summary-container {
+    width: 402px;
+    height: 45px;
+    margin-top: 16px;
+  }
+
+  .base-plan {
+    font-size: 16px;
+  }
+
+  .changeButton {
+    text-underline-offset: 2px;
+    margin-top: 7px;
+  }
+
+  .base-plan-total {
+    font-size: 16px;
+  }
+
+  hr {
+    width: 402px;
+    margin-top: 24px;
+    margin-left: 4px;
+  }
+
+  .addOn-summary {
+    width: 402px;
+    height: 20px;
+    margin-top: 16px;
+  }
+
+  .total-summary-container {
+    width: 402px;
+    height: 22px;
+    margin-left: 24px;
+  }
 }

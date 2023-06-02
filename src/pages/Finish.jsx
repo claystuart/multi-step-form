@@ -108,37 +108,40 @@ export default function Finish() {
             <h2>Double-check everything looks OK before confirming.</h2>
             <div className="summary">
 
-                <section className="base-plan-summary-container">
-                    <div className="control">
-                        <p className="base-plan">{choice} ({yearlyTerm === "true" ? "Yearly" : "Monthly"})</p>
-                        <button className="changeButton" onClick={changeTerm}>Change</button>
-                    </div>
-                    <p className="base-plan-total">${true && calculateBasePrice()}/{yearlyTerm === "true" ? "yr" : "mo"}</p>
-                </section>
+                <div className="lightGrayBackground">
 
-                <hr />
+                    <section className="base-plan-summary-container">
+                        <div className="control">
+                            <p className="base-plan">{choice} ({yearlyTerm === "true" ? "Yearly" : "Monthly"})</p>
+                            <button className="changeButton" onClick={changeTerm}>Change</button>
+                        </div>
+                        <p className="base-plan-total">${true && calculateBasePrice()}/{yearlyTerm === "true" ? "yr" : "mo"}</p>
+                    </section>
 
-                <section className="addon-summary-container">
-                    <div className={onlinePrice > 0 ? "addOn-summary" : "addOn-hide"}>
-                        <p className="gray-item">Online service</p>
-                        <p className="addOn-summary-item-cost">
-                            +{onlinePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
-                        </p>
-                    </div>
-                    <div className={storagePrice > 0 ? "addOn-summary" : "addOn-hide"}>
-                        <p className="gray-item">Larger Storage</p>
-                        <p className="addOn-summary-item-cost">
-                            +${storagePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
-                        </p>
-                    </div>
-                    <div className={profilePrice > 0 ? "addOn-summary" : "addOn-hide"}>
-                        <p className="gray-item">Customizable profile</p>
-                        <p className="addOn-summary-item-cost">
-                            +${profilePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
-                        </p>
-                    </div>
+                    <hr />
 
-                </section>
+                    <section className="addon-summary-container">
+                        <div className={onlinePrice > 0 ? "addOn-summary" : "addOn-hide"}>
+                            <p className="gray-item">Online service</p>
+                            <p className="addOn-summary-item-cost">
+                                +{onlinePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
+                            </p>
+                        </div>
+                        <div className={storagePrice > 0 ? "addOn-summary" : "addOn-hide"}>
+                            <p className="gray-item">Larger Storage</p>
+                            <p className="addOn-summary-item-cost">
+                                +${storagePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
+                            </p>
+                        </div>
+                        <div className={profilePrice > 0 ? "addOn-summary" : "addOn-hide"}>
+                            <p className="gray-item">Customizable profile</p>
+                            <p className="addOn-summary-item-cost">
+                                +${profilePrice}/{yearlyTerm === "true" ? "yr" : "mo"}
+                            </p>
+                        </div>
+
+                    </section>
+                </div>
 
                 <section className="total-summary-container">
                     <p className="gray-item">Total (per {yearlyTerm === "true" ? "year" : "month"})</p>

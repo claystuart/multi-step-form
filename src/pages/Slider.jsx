@@ -4,7 +4,7 @@ function Slider({ yearlyTerm, setYearlyTerm }) {
 
     return (
         <div className="sliderComponent">
-            <p className={yearlyTerm === "true" ? "sliderOff" : "sliderOn"}>Monthly</p>
+            <p className={yearlyTerm === "true" ? "slider-p sliderOff" : "slider-p sliderOn"}>Monthly</p>
             <label className="switchContainer">
                 <input type="checkbox"
                     checked={yearlyTerm === "true" ? true : false}
@@ -13,7 +13,7 @@ function Slider({ yearlyTerm, setYearlyTerm }) {
                 />
                 <b className="sliderBall" />
             </label>
-            <p className={yearlyTerm === "true" ? "sliderOn" : "sliderOff"}>Yearly</p>
+            <p className={yearlyTerm === "true" ? "slider-p sliderOn" : "slider-p sliderOff"}>Yearly</p>
         </div>
     )
 }

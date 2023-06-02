@@ -11,17 +11,17 @@
 
 /* Monthly/Yearly styling */
 .sliderOn {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 24px;
-  color: #022959;
+  color: var(--denim);
 }
 
 .sliderOff {
+  color: #9699aa;
+}
+
+.slider-p {
   font-size: 14px;
   font-weight: 500;
   margin: 24px;
-  color: #9699aa;
 }
 
 /* As usual, don't show checkbox */
@@ -75,5 +75,9 @@ input:checked + .sliderBall {
   .sliderComponent {
     margin-top: 32px;
     width: 450px;
+  }
+
+  .slider-p {
+    font-weight: 700;
   }
 }

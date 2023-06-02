@@ -17,6 +17,11 @@
   border: 1px solid #d6d9e6;
 }
 
+.addon:hover {
+  border: 1px solid #483eff;
+  cursor: pointer;
+}
+
 .addonChecked {
   border: 1px solid #483eff;
 }
@@ -41,11 +46,15 @@
   margin: 0;
 }
 
+.addon-explanation {
+  cursor: pointer;
+}
+
 .heading {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  color: #022959;
+  color: var(--denim);
 }
 
 .subheading {
@@ -64,4 +73,51 @@
   margin-right: 16px;
   margin-left: auto;
   color: #483eff;
+}
+
+@media (min-width: 940px) {
+  .addonContainer {
+    background-color: white;
+    padding: 0;
+    margin-left: 100px;
+    margin-top: 56px;
+    width: 450px;
+    height: 372px;
+  }
+
+  .addon {
+    margin-top: 16px;
+    width: 450px;
+    height: 81px;
+  }
+
+  .addon:first-of-type {
+    margin-top: 40px;
+  }
+
+  .addon-options {
+    margin: 24px;
+  }
+
+  .addon-explanation {
+    width: auto;
+    height: 45px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .subheading {
+    width: auto;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 7px;
+  }
+
+  .price {
+    width: 53px;
+    font-size: 15px;
+    margin-right: 14px;
+  }
 }

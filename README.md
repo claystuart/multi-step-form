@@ -9,19 +9,20 @@
    4. [useState](#lesson4)
    5. [useEffect](#lesson5)
    6. [Slider Control](#lesson6)
+   7. [Adaptive Box Sizing](#lesson7)
 
 3. [Gotchas](#gotchas)
 4. [React Boilerplate](#react)
 
-## Summary <a name="introduction"></a>
+# <a name="introduction">Summary</a>
 
 Used React to create a fairly complicated, responsive order form maintaining state across pages.
 
-## Lessons Learned <a name="lessons"></a>
+# <a name="lessons">Lessons Learned</a>
 
 The purpose of this section is to memorialize those lessons. I'm also going to include a smaller discussion about the slider section since that comes up a bit.
 
-### Creating a react project using vite <a name="lesson1"></a>
+### <a name="lesson1">Creating a react project using vite </a>
 
 1. npm create vite@latest (use . to give project same name as folder)
 2. choose JS & SWC
@@ -29,23 +30,44 @@ The purpose of this section is to memorialize those lessons. I'm also going to i
 4. npm install
 5. npm run dev to get it up and running
 
-### Including Various Resources <a name="lesson2"></a>
+### <a name="lesson2">Including Various Resources</a>
 
 1. `import App from "./App"` - include jsx
 2. `import "./css/style.css"` - include css
 3. `import { BrowserRouter } from "react-router-dom"` - include top-level routing in index.js
 4. `import { Routes, Route } from "react-router-dom"` - include routing switch (Routes) in App.jsx
 5. `import { useState, useEffect } from "react"` - include hooks for state and effect
+6. Adaptive option sizing
 
-### Routing <a name="lesson3"></a>
+### <a name="lesson3">Routing: how to switch between pages</a>
 
-### useState <a name="lesson4"></a>
+### <a name="lesson4">useState hook: how to set and recall variables</a>
 
-### useEffect <a name="lesson5"></a>
+#### Import useState and then destructure for var and setVar
 
-### Slider Control <a name="lesson6"></a>
+`import {useState} from "react" `  
+`-----------------------------`  
+`const [yearlyTerm] = useState(() => {`  
+`let temp = localStorage.getItem("yearlyTerm")`  
+`return temp === "true" ? "true" : "false"})`
 
-# Gotchas <a name="gotchas"></a>
+### <a name="lesson5">useEffect hook: how to create side-effects</a>
+
+### <a name="lesson6">Slider Control: how to create a slider switch</a>
+
+1. sliderComponent: top-level container for slider mechanism: set width of slider here
+2. `<p> <label> <p>`: left \<p> - then slider wrapped in \<label> - then right \<p>
+   - \<input checkbox> wrapped inside label
+   - \<b> wrapped next - ball with sliderBall:before
+   - ball animation css: `input:checked + .sliderBall:before { translate: 16px;}`
+
+### <a name="lesson7">Adaptive Box Sizing: box will shrink and grow for content</a>
+
+1. set min-height: 160px;
+2. set max-height: 183px;
+3. set height: max-content;
+
+# <a name="gotchas">Gotchas</a>
 
 ## React-isms that trip me up.
 
@@ -53,7 +75,7 @@ The purpose of this section is to memorialize those lessons. I'm also going to i
 2. Pass props down from high up
 3. useEffect - if you setSomething(foo) - the updated foo value won't be available in the current useEffect block. It will become available next call.
 
-# Getting Started with Create React App <a name="react"></a>
+## Getting Started with Create React App <a name="react"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
